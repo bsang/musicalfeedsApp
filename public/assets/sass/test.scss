@@ -1,0 +1,23 @@
+@import "compass/reset";
+@import "compass/css3";
+
+$main-background: gold;
+
+header {
+	@include border-radius(4px);
+	nav { 
+		// styles for nav
+		padding: 10px;
+		ul {
+			list-style-type: none;
+
+			li {
+				background: pink;
+
+				a {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

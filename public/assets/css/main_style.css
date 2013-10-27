@@ -1,0 +1,153 @@
+/**
+ * Full Sail University
+ * Biak Hlei Sang
+ * Music Connent
+ * Final Project
+ */
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*Floats*/
+/*Fonts Color*/
+/* line 22, ../sass/main_style.scss */
+body {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  background: #e8e8e8;
+}
+
+/* line 29, ../sass/main_style.scss */
+header .topHeading {
+  width: 960px;
+  margin: 0 auto;
+  padding: 7px 0 7px 0;
+}
+/* line 34, ../sass/main_style.scss */
+header .topHeading .branding {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  float: left;
+  margin-top: 5px;
+}
+/* line 42, ../sass/main_style.scss */
+header .topHeading .topNav {
+  float: right;
+  width: auto;
+}
+/* line 46, ../sass/main_style.scss */
+header .topHeading .topNav .userInfoBeforeLogin {
+  float: left;
+  margin-right: 15px;
+}
+/* line 50, ../sass/main_style.scss */
+header .topHeading .topNav .userInfoBeforeLogin .userIcon {
+  width: 32px;
+  height: 32px;
+  background: url(../img/user.png) no-repeat;
+  float: left;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+/* line 59, ../sass/main_style.scss */
+header .topHeading .topNav .userInfoBeforeLogin .usernameDisplay {
+  float: right;
+  line-height: 35px;
+  color: #f0f0f0;
+}
+/* line 66, ../sass/main_style.scss */
+header .topHeading .topNav .newPostIcon {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background: #b3b3b3;
+  border: 2px solid #fff;
+  float: left;
+  margin-right: 15px;
+  display: none;
+}
+/* line 77, ../sass/main_style.scss */
+header .topHeading .topNav .userInfo {
+  float: left;
+  margin-right: 15px;
+  display: none;
+}
+/* line 82, ../sass/main_style.scss */
+header .topHeading .topNav .userInfo .profilePic {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background: #445454;
+  border: 2px solid #fff;
+  float: left;
+  margin-right: 5px;
+}

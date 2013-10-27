@@ -1,0 +1,94 @@
+/**
+ * Full Sail University
+ * Biak Hlei Sang
+ * Music Connent
+ * Final Project
+ */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$main-background: gold;
+$main-width: 960px;
+$margin-zeroAuto: 0 auto;
+$uppercase: uppercase;
+
+/*Floats*/
+$float-left: left;
+
+/*Fonts Color*/
+$whiteColor: #f0f0f0;
+
+body {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  background: #e8e8e8;
+}
+
+header {
+
+  .topHeading {
+    width: $main-width;
+    margin: $margin-zeroAuto;
+    padding: 7px 0 7px 0;
+
+    .branding {
+      font-size: 22px;
+      text-transform: $uppercase;
+      color: $whiteColor;
+      float: $float-left;
+      margin-top: 5px;
+    }
+
+    .topNav {
+      float: right;
+      width: auto;
+
+      .userInfoBeforeLogin {
+        float: left;
+        margin-right: 15px;
+
+        .userIcon {
+          width: 32px;
+          height: 32px;
+          background: url(../img/user.png) no-repeat;
+          float: left;
+          margin-right: 5px;
+          margin-top: 2px;
+        }
+
+        .usernameDisplay {
+          float: right;
+            line-height: 35px;
+            color: #f0f0f0;
+        }
+      }
+
+      .newPostIcon {
+        width: 32px;
+        height: 32px;
+        @include border-radius(50px);
+        background: #b3b3b3;
+        border: 2px solid #fff;
+        float: left;
+        margin-right: 15px;
+        display: none;
+      }
+
+      .userInfo {
+        float: left;
+        margin-right: 15px;
+        display: none;
+
+        .profilePic {
+          width: 32px;
+          height: 32px;
+          @include border-radius(50px);
+          background: #445454;
+          border: 2px solid #fff;
+          float: left;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
