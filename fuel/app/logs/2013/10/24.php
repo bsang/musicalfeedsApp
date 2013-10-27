@@ -1,0 +1,19 @@
+<?php defined('COREPATH') or exit('No direct script access allowed'); ?>
+
+ERROR - 2013-10-24 10:16:31 --> Notice - Undefined variable: comments in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/home/index.php on line 34
+ERROR - 2013-10-24 22:37:10 --> Parsing Error - syntax error, unexpected 'Asset' (T_STRING), expecting ',' or ';' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/layout/header.php on line 11
+ERROR - 2013-10-24 22:41:43 --> Parsing Error - syntax error, unexpected ')', expecting ',' or ';' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/layout/header.php on line 11
+ERROR - 2013-10-24 22:46:22 --> Parsing Error - syntax error, unexpected 'array' (T_ARRAY) in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/layout/header.php on line 11
+ERROR - 2013-10-24 22:53:42 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause' with query: "SELECT * FROM `users` WHERE (`username` = 'biak@gmail.com' OR `email` = 'biak@gmail.com') AND `password` = 'tm+f3OzdzSQ1CxFT3UIh+aW4mm2kDZpGKOxUM/6CIeU='" in /Users/Tabiak/Sites/musicalfeeds/fuel/core/classes/database/pdo/connection.php on line 208
+ERROR - 2013-10-24 22:55:07 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause' with query: "SELECT * FROM `users` WHERE (`username` = 'biak@gmail.com' OR `email` = 'biak@gmail.com') AND `password` = 'tm+f3OzdzSQ1CxFT3UIh+aW4mm2kDZpGKOxUM/6CIeU='" in /Users/Tabiak/Sites/musicalfeeds/fuel/core/classes/database/pdo/connection.php on line 208
+ERROR - 2013-10-24 22:58:33 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause' with query: "SELECT * FROM `users` WHERE (`username` = 'biak@gmail.com' OR `email` = 'biak@gmail.com') AND `password` = 'tm+f3OzdzSQ1CxFT3UIh+aW4mm2kDZpGKOxUM/6CIeU='" in /Users/Tabiak/Sites/musicalfeeds/fuel/core/classes/database/pdo/connection.php on line 208
+ERROR - 2013-10-24 23:04:26 --> Parsing Error - syntax error, unexpected 'confirmPassword' (T_STRING), expecting ')' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/users/login.php on line 75
+ERROR - 2013-10-24 23:46:00 --> 4096 - Argument 5 passed to Auth\Auth_Login_Simpleauth::create_user() must be of the type array, string given, called in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 65 and defined in /Users/Tabiak/Sites/musicalfeeds/fuel/packages/auth/classes/auth/login/simpleauth.php on line 225
+ERROR - 2013-10-24 23:46:12 --> 4096 - Argument 5 passed to Auth\Auth_Login_Simpleauth::create_user() must be of the type array, string given, called in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 65 and defined in /Users/Tabiak/Sites/musicalfeeds/fuel/packages/auth/classes/auth/login/simpleauth.php on line 225
+ERROR - 2013-10-24 23:59:49 --> Parsing Error - syntax error, unexpected ')' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 72
+ERROR - 2013-10-24 23:59:50 --> Parsing Error - syntax error, unexpected ')' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 72
+ERROR - 2013-10-24 23:59:50 --> Parsing Error - syntax error, unexpected ')' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 72
+ERROR - 2013-10-24 23:59:55 --> Parsing Error - syntax error, unexpected '}' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 73
+ERROR - 2013-10-24 23:59:56 --> Parsing Error - syntax error, unexpected '}' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 73
+ERROR - 2013-10-24 23:59:56 --> Parsing Error - syntax error, unexpected '}' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 73
+ERROR - 2013-10-24 23:59:56 --> Parsing Error - syntax error, unexpected '}' in /Users/Tabiak/Sites/musicalfeeds/fuel/app/classes/controller/users.php on line 73

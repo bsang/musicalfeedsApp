@@ -1,0 +1,30 @@
+<?php defined('COREPATH') or exit('No direct script access allowed'); ?>
+
+ERROR - 2013-10-11 00:01:13 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 00:01:43 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 07:54:35 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:21:39 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:21:47 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:21:55 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:23:33 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:23:37 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:24:10 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:24:44 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:25:27 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:26:49 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:27:17 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:27:19 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:27:21 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:27:40 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:27:43 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:27:45 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:34:44 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:35:53 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 14:36:10 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:14:44 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:15:19 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:15:24 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:39:12 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:39:54 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:40:46 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
+ERROR - 2013-10-11 23:40:48 --> Notice - Undefined variable: title in /Users/Tabiak/Sites/musicalfeeds/fuel/app/views/404.php on line 5
