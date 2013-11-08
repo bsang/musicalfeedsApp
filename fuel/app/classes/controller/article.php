@@ -22,12 +22,25 @@ class Controller_Article extends Controller_Base
 
 		Casset::css('detail.css');
 
-		$this->template->title  = 'Musical Feeds' . ' | ' . ' Content title';
+		$this->template->title  = $post->category->name .' - '.$post->title;
 		$this->template->content   = View::forge('home/view', array(
 			'post'      	=> $post,
-			// 'categories' 	=> $post->get_categories(),
 			'comments'  	=> $post->get_comments(),
 		), false);
+	}
+
+	public function post_comment($article_url)
+	{
+		if (! $post = Model_Post::get_by_url($article_url))
+		{
+			throw new HttpNotFoundException;
+		}
+
+		$text = Input::post('comment');
+
+		$comment = $post->add_comment($this->auth->get_user_id()[1], $text);
+
+		$this->redirect($post->url(), 'success', "Added new post #{$post->id}");
 	}
 
 
@@ -44,18 +57,19 @@ class Controller_Article extends Controller_Base
 
 		$post = Model_Post::forge(array(
 			'title'   			=> Input::post('title'),
+			'video'         => Input::post('video'),
 			'category_id'   => Input::post('genre'),
 			'content' 			=> Input::post('content'),
 			'tags' 					=> Input::post('tags'),
 			'user_id' 			=> $this->auth->get_user_id()[1],
 		));
 
-		if (! $post->save())
+		if (Input::post('title') == ' ' || Input::post('content') == '' || ! $post->save())
 		{
-			$this->redirect('create', 'error', 'Could not save post.');
+			$this->redirect('article/create', 'error', 'Could not save post.');
 		}
 
-		$this->redirect('home', 'success', "Added new post #{$post->id}");
+		$this->redirect($post->url(), 'success', "Added new post #{$post->id}");
 	}
 
 
@@ -89,6 +103,7 @@ class Controller_Article extends Controller_Base
 		}
 
 		$post->title    = $val->validated('title');
+		$post->video 		= $val->validated('video');
 		$post->genre    = $val->validated('genre');
 		$post->content  = $val->validated('content');
 		$post->tags     = $val->validated('tags');

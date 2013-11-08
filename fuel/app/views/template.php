@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title><?= isset($title) ? $title : 'default title' ?></title>
+		<?= Asset::css('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css')?>
 		<?= Casset::render_css() ?>
 	</head>
 
@@ -15,7 +16,7 @@
 		
 		<div id="pageWrapper" class="clearFix">
 			<!-- Navigation bar -->
-			<?= View::forge('layout/navigation') ?>
+			<?= $navigation ?>
 			<!-- End Navigation Bar -->
 
 			<!-- Main Contents -->

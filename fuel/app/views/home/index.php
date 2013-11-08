@@ -1,28 +1,36 @@
 <div class="contentWrapper">
+          <div class="clearFix">
+            <h1 class="newsFeed">News Feed</h1>
 
-          <h1 class="newsFeed">News Feed</h1>
+            <div class="sortLine">
+              <span class="sortText">
+                Sort: Lastest Post &#9660
+              </span>
+            </div>
+          </div>
+          
           <section>
             <!-- Post Summary -->
             <?php foreach ($posts as $post): ?>
               <div class="postSummary">
-                <article class="contentArea">
+                <article class="contentArea clearFix">
                     <div class="contentHeader clearFix">
                       <div class="profilePicture">
-                        <a href="profile.html"><?= Html::anchor('users/profile', Asset::img('taylog.jpg'))?></a>
+                        <?= Html::anchor('users/profile/'.$post->user->id, Asset::img('taylog.jpg'))?>
                       </div>
 
                       <div class="profileHeaderContent">
                         <h1><a href="#"><?= Html::anchor($post->url(), $post->title) ?></a></h1>
-                        <p class="author">First Last</p>
+                        <p class="author">by <?= $post->user->first_name, ' ', $post->user->last_name ?></p>
                       </div>
                     </div>
 
                     <div class="postExcerpt">
-                      <p><?= $post->content_excerpt() ?> <?= Html::anchor($post->url(), '[...]') ?></p>
+                      <?= $post->content_excerpt() ?> <?= Html::anchor($post->url(), '[...]') ?>
                     </div>
 
                     <div class="contentFooter clearFix">
-                      <p class="date">September 11, 2013 on <span><a href="#">Rock</a></span></p>
+                      <p class="date"><?= $post->date("F d, Y") ?> on <span><?= Html::anchor($post->category->url() , $post->category->name) ?></span></p>
                       <div class="likeComment">
                         <div class="like clearFix">
                           <?= Asset::img('likeIcon.png') ?>
@@ -31,7 +39,7 @@
 
                         <div class="commentIcon clearFix">
                           <?= Asset::img('commentIcon.png') ?>
-                          <p>12</p>
+                          <p><?= $post->total_comments()?></p>
                         </div>
                       </div>
                     </div>

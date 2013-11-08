@@ -16,6 +16,18 @@
       </div>
 
       <div class="control-group">
+        <?php echo Form::label('Video', 'title', array('class' => 'postLabel')); ?>
+
+        <div class="controls">
+          <?php echo Form::input('video', 
+            Input::post('video', 
+            isset($post) ? $post->video : ''),
+            array('class' => 'postTitle', 'placeholder'=>'Video Embed Code')); ?>
+        </div>
+
+      </div>
+
+      <div class="control-group">
         <?php echo Form::label('Genre', 'genre', array('class'=>'postLabel')); ?>
         
         <?php echo Form::select('genre', 'Select Genre', Model_Category::select_category()) ?>

@@ -1,5 +1,5 @@
 <section class="contentWrapper">
-  <h1 class="addNewPost">Add a new post</h1>
+  <h1 class="addNewPost">Add New Post</h1>
   
   <?php echo Form::open(array("class"=>"postForm", 'action' => 'article/create')); ?>
     <fieldset>
@@ -15,12 +15,39 @@
 
       </div>
 
-      <div class="control-group">
+      <div class="clearFix">
         <?php echo Form::label('Genre', 'genre', array('class'=>'postLabel')); ?>
         
-        <?php echo Form::select('genre', 'Select Genre', Model_Category::select_category()) ?>
-
+        <?php echo Form::select('genre', 'Select Genre', Model_Category::select_category(), array("class" => "selectGenre")) ?>
+        
+        <div class="media clearFix">
+          <div class="embedVideo">Embed Video</div>
+          <div class="embedPhoto">Embed Photo</div>
+        </div>
       </div>
+
+      <div class="controls">
+        <?php echo Form::textarea('video', 
+          Input::post('video', 
+          isset($post) ? $post->video : ''),
+          array('class' => 'postVideoInvisible', 'rows' => 5, 'placeholder'=>'Video Embed Code')); ?>
+      </div>
+
+
+      <div id="video-dialog" title="Embed Music Video">
+        <div class="control-group">
+        <?php echo Form::label('Video', 'title', array('class' => 'postLabel')); ?>
+
+        <div class="controls">
+          <?php echo Form::textarea('video', 
+            Input::post('video', 
+            isset($post) ? $post->video : ''),
+            array('class' => 'postVideo', 'rows' => 5, 'placeholder'=>'Paste Embed Code')); ?>
+        </div>
+
+        </div>
+      </div>
+
 
       <div class="control-group">
         <?php echo Form::label('Content', 'content', array('class'=>'postLabel')); ?>
@@ -49,8 +76,8 @@
       <div class="control-group">
         <label class='control-label'>&nbsp;</label>
         <div class='controls'>
-          <?php echo Form::submit('submit', 'Save', 
-            array('class' => 'btn btn-primary')); ?>
+          <?php echo Form::submit('submit', 'Publish', 
+            array('class' => 'publishButton')); ?>
         </div>
       </div>
     </fieldset>

@@ -104,18 +104,119 @@
         ]
     },
     {
+        "name": "opauth/opauth",
+        "version": "0.4.4",
+        "version_normalized": "0.4.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/opauth/opauth.git",
+            "reference": "436fb98c2374c9e8ae4d8adddf83214bee4d9c72"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/opauth/opauth/zipball/436fb98c2374c9e8ae4d8adddf83214bee4d9c72",
+            "reference": "436fb98c2374c9e8ae4d8adddf83214bee4d9c72",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "suggest": {
+            "opauth/facebook": "Allows Facebook authentication",
+            "opauth/google": "Allows Google authentication",
+            "opauth/twitter": "Allows Twitter authentication"
+        },
+        "time": "2013-05-10 09:01:52",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lib/Opauth/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "U-Zyn Chua",
+                "email": "chua@uzyn.com",
+                "homepage": "http://uzyn.com"
+            }
+        ],
+        "description": "Multi-provider authentication framework for PHP",
+        "homepage": "http://opauth.org",
+        "keywords": [
+            "Authentication",
+            "OpenId",
+            "auth",
+            "facebook",
+            "google",
+            "oauth",
+            "omniauth",
+            "twitter"
+        ]
+    },
+    {
+        "name": "opauth/facebook",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/opauth/facebook.git",
+            "reference": "31e26188d1ac67a8d1831c1a8426bab2b3b7cd02"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/opauth/facebook/zipball/31e26188d1ac67a8d1831c1a8426bab2b3b7cd02",
+            "reference": "31e26188d1ac67a8d1831c1a8426bab2b3b7cd02",
+            "shasum": ""
+        },
+        "require": {
+            "opauth/opauth": ">=0.2.0",
+            "php": ">=5.2.0"
+        },
+        "time": "2013-10-13 23:57:34",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "U-Zyn Chua",
+                "email": "chua@uzyn.com",
+                "homepage": "http://uzyn.com"
+            }
+        ],
+        "description": "Facebook strategy for Opauth",
+        "homepage": "http://opauth.org",
+        "keywords": [
+            "Authentication",
+            "auth",
+            "facebook"
+        ]
+    },
+    {
         "name": "fuelphp/upload",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/fuelphp/upload.git",
-            "reference": "68bfab6f732af326ff0b364b996b15c250014a8b"
+            "reference": "6310108de98ffdbf1083612db5b15411fc140c90"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/fuelphp/upload/zipball/68bfab6f732af326ff0b364b996b15c250014a8b",
-            "reference": "68bfab6f732af326ff0b364b996b15c250014a8b",
+            "url": "https://api.github.com/repos/fuelphp/upload/zipball/6310108de98ffdbf1083612db5b15411fc140c90",
+            "reference": "6310108de98ffdbf1083612db5b15411fc140c90",
             "shasum": ""
         },
         "require": {
@@ -124,7 +225,7 @@
         "require-dev": {
             "mockery/mockery": "0.7.*"
         },
-        "time": "2013-08-15 21:55:11",
+        "time": "2013-10-11 21:42:58",
         "type": "library",
         "installation-source": "source",
         "autoload": {

@@ -9,4 +9,5 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Monolog' => array($vendorDir . '/monolog/monolog/src'),
     'Fuel\\Upload' => array($vendorDir . '/fuelphp/upload/src'),
+    '' => array($vendorDir . '/opauth/facebook'),
 );

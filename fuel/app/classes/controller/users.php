@@ -11,14 +11,12 @@ class Controller_Users extends Controller_Base
     Casset::css('style.css');
   }
 
-	public function get_profile()
+	public function get_profile($user_id)
 	{
-		// $user = Model_User::find($id);
-
-  //   if(! $user)
-  //   {
-  //     throw new HttpNotFoundException;
-  //   }
+    if(! $profile = Model_User::get_by_id($user_id))
+    {
+      throw new HttpNotFoundException;
+    }
 
   //   Casset::css('profile.css');
 
@@ -28,8 +26,11 @@ class Controller_Users extends Controller_Base
     Casset::css('profile.css');
 
     $this->template->title = 'Profile:';
-    $this->template->content = View::forge('users/profile');
+    $this->template->content = View::forge('users/profile', array(
+      'profile' => $profile
+    ));
 	}
+  
 
   public function get_login()
   {

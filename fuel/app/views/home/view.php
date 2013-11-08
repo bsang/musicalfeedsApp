@@ -5,7 +5,7 @@
 
 							<div id="contentHeaderInfo" class="clearFix">
 
-								<p class="date">September 11, 2013 on <span><a href="#"><?= $post->category_id ?></a></span></p>
+								<p class="date"><?= $post->date("F d, Y") ?> on <span><?= Html::anchor($post->category->url(),$post->category->name) ?></span></p>
 
 								<div class="likeComment">
 									<div class="like clearFix">
@@ -24,6 +24,7 @@
 
 						<!-- Full Content -->
 						<article id="fullContent">
+							<?= $post->video ?>
 							<p><?= $post->content ?></p>
 						</article>
 					</section>
@@ -33,7 +34,7 @@
 
 							<div class="userProfilePicture"></div>
 							<div class="userProfileInfo">
-								<p>Carrie Underwood</p>
+								<p><?= $post->user->first_name, ' ', $post->user->last_name ?></p>
 								<a href="profile.html">View Profile</a>
 							</div>
 
@@ -56,8 +57,8 @@
 										<div class="userProfilePicture"></div>
 										<article class="commentContent">
 											<div class="commentHeader clearFix">
-												<strong class="displayName">Maecenas:</strong>
-												<div class="commentDate"><p>September 29, 2013</p></div>
+												<strong class="displayName"><?= $comment->user->first_name, ' ',$comment->user->last_name ?></strong>
+												<div class="commentDate"><p><?= $comment->date("F d, Y") ?></p></div>
 											</div>
 											<p><?= $comment->comment ?></p>
 										</article>
@@ -67,14 +68,35 @@
 								<p>Leave the first comment...</p>
 							<?php endif;?>
 						</div>
-
-						<div class="addComment">
-							<div class="userProfilePicture"></div>
-							<div class="commentForm">
-								<form>
-									<textarea id="commentText" rows="2" cols="58" placeholder="Write a comment..."></textarea>
-									<input type="button" id="addCommentButton" value="Post A Comment">
-								</form>
+						
+						<?php if($user): ?>
+							<div class="addComment">
+								<div class="userProfilePicture"></div>
+								<div class="commentForm">
+									<?php echo Form::open(array("class" => "commentForm", 'action' => 'article/comment/' . $post->url)); ?>
+										<?php echo Form::textarea('comment', 
+					           null, 
+					            array('id' => 'commentText', 'rows' => 2, 'cols' => 53, 'placeholder'=>'Write a comment...')); ?>
+										
+										<?php echo Form::submit('submit', 'Post A Comment', 
+	            				array('id' => 'addCommentButton')); ?>
+									<?php echo Form::close(); ?>
+								</div>
 							</div>
-						</div>
+						<?php else: ?>
+							<div class="addComment">
+								<div class="userProfilePicture"></div>
+								<div class="commentForm">
+									<?php echo Form::open(array("class" => "commentForm", 'action' => 'users/login/')); ?>
+										<?php echo Form::textarea('comment', 
+					           null, 
+					            array('id' => 'commentText', 'rows' => 2, 'cols' => 53, 'placeholder'=>'Please Login to make a comment')); ?>
+										
+										<?php echo Form::submit('submit', 'Post A Comment', 
+	            				array('id' => 'addCommentButton')); ?>
+									<?php echo Form::close(); ?>
+								</div>
+							</div>
+						<?php endif; ?>
+						
 				</section>

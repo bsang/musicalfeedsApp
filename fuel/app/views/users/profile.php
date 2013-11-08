@@ -4,8 +4,8 @@
 						<div class="profileHeader clearFix">
 							<div class="profilePicture"><?= Asset::img('taylog.jpg') ?></div>
 							<div class="userProfileInfo clearFix">
-								<h1>Taylor Swift</h1>
-								<p class="location">California, CA</p>
+								<h1><?= $profile->first_name, ' ', $profile->last_name ?></h1>
+								<p class="location"><?= $profile->city ?></p>
 							</div>
 							<button class="subscribeButton">Subscribe</button>
 						</div>
@@ -16,7 +16,7 @@
 					<div class="profileTabs clearFix">
 						<a href="profile.html">
 							<div class="posts clearFix">
-								<h3 class="numPosts">50</h3>
+								<h3 class="numPosts"><?= count($profile->posts) ?></h3>
 								<h4>Posts</h4>
 							</div>
 						</a>
@@ -39,37 +39,47 @@
 					<!-- Posts from user -->
 					<div class="userPosts">
 
-						<div class="postContainer">
-							<article class="contentArea">
-										<div class="contentHeader clearFix">
-											<div class="profilePicture"><a href="profile.html"><?= Asset::img('taylog.jpg') ?></a></div>
-											<div class="profileHeaderContent">
-												<h1></h1>
-												<p class="author">Taylor Swift</p>
-											</div>
-										</div>
+						<section>
+            <!-- Post Summary -->
+            <?php foreach ($profile->posts as $post): ?>
+              <div class="postSummary">
+                <article class="contentArea clearFix">
+                    <div class="contentHeader clearFix">
+                      <div class="profilePicture">
+                        <?= Html::anchor('users/profile', Asset::img('taylog.jpg'))?>
+                      </div>
 
-										<div class="postExcerpt">
-											<p>[...]</a></p>
-										</div>
+                      <div class="profileHeaderContent">
+                        <h1><a href="#"><?= Html::anchor($post->url(), $post->title) ?></a></h1>
+                        <p class="author"><?= $post->user->first_name, ' ', $post->user->last_name ?></p>
+                      </div>
+                    </div>
 
-										<div class="contentFooter clearFix">
-											<p class="date">September 11, 2013 on <span><a href="#">Rock</a></span></p>
-											<div class="likeComment">
-												<div class="like clearFix">
-													<?= Asset::img('likeIcon.png') ?>
-													<p>12</p>
-												</div>
+                    <div class="postExcerpt">
+                      <?= $post->content_excerpt() ?> <?= Html::anchor($post->url(), '[...]') ?>
+                    </div>
 
-												<div class="commentIcon clearFix">
-													<?= Asset::img('commentIcon.png') ?>
-													<p>14</p>
-												</div>
-											</div>
-										</div>
-							
-							</article>
-						</div>
+                    <div class="contentFooter clearFix">
+                      <p class="date"><?= $post->date("F d, Y") ?> on <span><?= Html::anchor($post->category->url() , $post->category->name) ?></span></p>
+                      <div class="likeComment">
+                        <div class="like clearFix">
+                          <?= Asset::img('likeIcon.png') ?>
+                          <p>12</p>
+                        </div>
+
+                        <div class="commentIcon clearFix">
+                          <?= Asset::img('commentIcon.png') ?>
+                          <p>12</p>
+                        </div>
+                      </div>
+                    </div>
+                </article>
+
+              </div>
+            <?php endforeach; ?>
+            <!-- End Post Summary -->
+          </section>
+          <!-- End Section -->
 
 					</div>
 					<!-- End UserPosts -->

@@ -8,10 +8,30 @@ class Model_Post extends \Orm\Model
     'user_id',
     'category_id',
     'title',
+    'video',
     'content',
     'tags',
     'created_at',
     'updated_at',
+  );
+
+
+  protected static $_belongs_to = array(
+    'category' => array(
+        'key_from' => 'category_id',
+        'model_to' => 'Model_Category',
+        'key_to' => 'id',
+        'cascade_save' => true,
+        'cascade_delete' => false,
+    ),
+
+    'user' => array(
+        'key_from' => 'user_id',
+        'model_to' => 'Model_User',
+        'key_to' => 'id',
+        'cascade_save' => true,
+        'cascade_delete' => false,
+    )
   );
 
   protected static $_observers = array(
@@ -51,6 +71,11 @@ class Model_Post extends \Orm\Model
     return static::query()->order_by('id', 'desc')->get();
   }
 
+  public function date($format = 'r')
+  {
+    return date($format, $this->created_at);
+  }
+
   // Custom URL
   public function url($action = null)
   {
@@ -62,10 +87,26 @@ class Model_Post extends \Orm\Model
     return Model_Post_Comment::query()->where('post_id', $this->id)->get();
   }
 
-  // public function get_categories()
-  // {
-  //   return Model_Categories::query()->where('id', $this->id)->get();
-  // }
+  public function total_comments()
+  {
+    return Model_Post_Comment::query()->where('post_id', $this->id)->count();
+  }
+
+  public function add_comment($user_id, $comment)
+  {
+    $comment = Model_Post_Comment::forge(array(
+      'user_id'       => $user_id,
+      'post_id'       => $this->id,
+      'comment'       => $comment,
+    ));
+
+    return $comment->save() ? $comment : false;
+  }
+
+  public static function get_by_category($category_id)
+  {
+    return static::query()->where('category_id', $category_id)->order_by('created_at', 'desc')->get();
+  }
 
   public static function get_by_url($url)
   {

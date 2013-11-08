@@ -92,6 +92,11 @@ class Controller_Base extends Controller_Template
 			? $this->template->header = View::forge('layout/header')
 			: $this->template->header = View::forge('layout/header');
 
+		// navigation
+		$this->template->navigation = View::forge('layout/navigation', array(
+			'categories' => Model_Category::get_categories_alphabetical(),
+		));
+
 		// enviroment specific
 		switch (Fuel::$env)
 		{
